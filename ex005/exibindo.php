@@ -8,18 +8,18 @@
 </head>
 <body>
     <header>
-        <h1>Resultado</h1>
+        <h1><strong>Resultado Final</strong></h1>
     </header>
     <main>
         <?php 
-            $numero = $_GET["numero"] ?? "sem nome";
-            $antecessor = $numero - 1 ;
-            $sucessor = $numero + 1 ;
+            $numero = $_REQUEST["numero"] ?? 0;
+            $antecessor = $numero - 1 ?? 0;
+            $sucessor = $numero + 1 ?? 0;
             echo "<p>O numero escolhido foi <strong>$numero</strong>!</p>";
             echo "<p>O numero antecessor do escolhido é <strong>$antecessor</strong>!</p>";
             echo "<p>O numero sucessor do escolhido é <strong>$sucessor</strong>!</p>";
         ?>
-        <p><a href="javascript:history.go(-1)">Voltar para pagina anterior</a></p>
+        <button onclick="javascript:window.location.href='index.php'">&#x2B05; Voltar</button>
     </main>
 </body>
 </html>
